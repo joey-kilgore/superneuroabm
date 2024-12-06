@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>superneuroabm.core package &#8212; superneuroabm  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=89b800e6" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="superneuroabm package" href="superneuroabm.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="superneuroabm.html" title="superneuroabm package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">superneuroabm  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="superneuroabm.html" accesskey="U">superneuroabm package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">superneuroabm.core package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="superneuroabm-core-package">
+<h1>superneuroabm.core package<a class="headerlink" href="#superneuroabm-core-package" title="Permalink to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-superneuroabm.core.agent">
+<span id="superneuroabm-core-agent-module"></span><h2>superneuroabm.core.agent module<a class="headerlink" href="#module-superneuroabm.core.agent" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="superneuroabm.core.agent.AgentFactory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">superneuroabm.core.agent.</span></span><span class="sig-name descname"><span class="pre">AgentFactory</span></span><a class="headerlink" href="#superneuroabm.core.agent.AgentFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="superneuroabm.core.agent.AgentFactory.breeds">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">breeds</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#superneuroabm.core.agent.Breed" title="superneuroabm.core.agent.Breed"><span class="pre">Breed</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#superneuroabm.core.agent.AgentFactory.breeds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the breeds registered in the model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of currently registered breeds.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.agent.AgentFactory.create_agent">
+<span class="sig-name descname"><span class="pre">create_agent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">breed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#superneuroabm.core.agent.Breed" title="superneuroabm.core.agent.Breed"><span class="pre">Breed</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#superneuroabm.core.agent.AgentFactory.create_agent" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Creates and agent of the given breed initialized with the properties given in</dt><dd><p><a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>breed</strong> – Breed definition of agent</p></li>
+<li><p><strong>**kwargs</strong> – <p>named arguments of agent properties. Names much match properties
+already registered in breed.</p>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Agent ID</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.agent.AgentFactory.generate_agent_data_tensors">
+<span class="sig-name descname"><span class="pre">generate_agent_data_tensors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_cuda</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#superneuroabm.core.agent.AgentFactory.generate_agent_data_tensors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.agent.AgentFactory.get_agent_property_value">
+<span class="sig-name descname"><span class="pre">get_agent_property_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">property_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agent_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#superneuroabm.core.agent.AgentFactory.get_agent_property_value" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Returns the value of the specified property_name of the agent with</dt><dd><p>agent_id</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>property_name</strong> – str name of property as registered in the breed.</p></li>
+<li><p><strong>agent_id</strong> – Agent’s id as returned by create_agent</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>value of property_name property for agent of agent_id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.agent.AgentFactory.get_agents_with">
+<span class="sig-name descname"><span class="pre">get_agents_with</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#superneuroabm.core.agent.AgentFactory.get_agents_with" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Returns an Dict, key: agent_id value: List of properties, of the agents that satisfy</dt><dd><p>the query. Query must be a callable that returns a boolean and accepts <a href="#id5"><span class="problematic" id="id6">**</span></a>kwargs
+where arguments may with breed property names may be accepted and used to form
+query logic.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>query</strong> – Callable that takes agent data as dict and returns List of agent data</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict of agent_id: List of properties</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="superneuroabm.core.agent.AgentFactory.num_agents">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_agents</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#superneuroabm.core.agent.AgentFactory.num_agents" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Returns number of agents. Agents are not removed if they are killed at the</dt><dd><p>moment.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.agent.AgentFactory.register_breed">
+<span class="sig-name descname"><span class="pre">register_breed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">breed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#superneuroabm.core.agent.Breed" title="superneuroabm.core.agent.Breed"><span class="pre">Breed</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#superneuroabm.core.agent.AgentFactory.register_breed" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Registered agent breed in the model so that agents can be created under</dt><dd><p>this definition.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>breed</strong> – Breed definition of agent</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.agent.AgentFactory.set_agent_property_value">
+<span class="sig-name descname"><span class="pre">set_agent_property_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">property_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">agent_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dims</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#superneuroabm.core.agent.AgentFactory.set_agent_property_value" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Sets the property of property_name for the agent with agent_id with</dt><dd><p>value.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>property_name</strong> – str name of property as registered in the breed.</p></li>
+<li><p><strong>agent_id</strong> – Agent’s id as returned by create_agent</p></li>
+<li><p><strong>value</strong> – New value for property</p></li>
+<li><p><strong>dims</strong> – Optional dimensions of property_value as List of ints. Not
+required, but improves performance if provied. E.g. [0] if value is a
+single number like 0, [4, 2] if it is a multi-dimensional list/array with
+dimensions 4 and 2.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.agent.AgentFactory.update_agents_properties">
+<span class="sig-name descname"><span class="pre">update_agents_properties</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">equal_side_agent_data_tensors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">typing.List[typing.List[typing.Any]]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_cuda</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#superneuroabm.core.agent.AgentFactory.update_agents_properties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="superneuroabm.core.agent.Breed">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">superneuroabm.core.agent.</span></span><span class="sig-name descname"><span class="pre">Breed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superneuroabm.core.agent.Breed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="superneuroabm.core.agent.Breed.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#superneuroabm.core.agent.Breed.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="superneuroabm.core.agent.Breed.properties">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">properties</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#superneuroabm.core.agent.Breed.properties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.agent.Breed.register_property">
+<span class="sig-name descname"><span class="pre">register_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">nan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_dims</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#superneuroabm.core.agent.Breed.register_property" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.agent.Breed.register_step_func">
+<span class="sig-name descname"><span class="pre">register_step_func</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step_func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superneuroabm.core.agent.Breed.register_step_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>What the agent is supposed to do during a simulation step.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="superneuroabm.core.agent.Breed.step_funcs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">step_funcs</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#superneuroabm.core.agent.Breed.step_funcs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-superneuroabm.core.model">
+<span id="superneuroabm-core-model-module"></span><h2>superneuroabm.core.model module<a class="headerlink" href="#module-superneuroabm.core.model" title="Permalink to this heading">¶</a></h2>
+<p>SuperNeuroABM basic Model class</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="superneuroabm.core.model.Model">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">superneuroabm.core.model.</span></span><span class="sig-name descname"><span class="pre">Model</span></span><a class="headerlink" href="#superneuroabm.core.model.Model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="superneuroabm.core.model.Model.THREADSPERBLOCK">
+<span class="sig-name descname"><span class="pre">THREADSPERBLOCK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">32</span></em><a class="headerlink" href="#superneuroabm.core.model.Model.THREADSPERBLOCK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.model.Model.create_agent_of_breed">
+<span class="sig-name descname"><span class="pre">create_agent_of_breed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">breed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#superneuroabm.core.agent.Breed" title="superneuroabm.core.agent.Breed"><span class="pre">Breed</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#superneuroabm.core.model.Model.create_agent_of_breed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.model.Model.get_agent_property_value">
+<span class="sig-name descname"><span class="pre">get_agent_property_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">property_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#superneuroabm.core.model.Model.get_agent_property_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.model.Model.get_agents_with">
+<span class="sig-name descname"><span class="pre">get_agents_with</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#superneuroabm.core.model.Model.get_agents_with" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.model.Model.get_synapse_weight">
+<span class="sig-name descname"><span class="pre">get_synapse_weight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">presynaptic_neuron_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_synaptic_neuron_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#superneuroabm.core.model.Model.get_synapse_weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return synaptic weight. This function is useful if STDP is
+turned on as weights will be updated during simulation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>presynaptic_neuron_id</strong> – int</p></li>
+<li><p><strong>presynaptic_neuron_id</strong> – int</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>float, final weight of synapse</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.model.Model.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fpath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#superneuroabm.core.model.Model" title="superneuroabm.core.model.Model"><span class="pre">Model</span></a></span></span><a class="headerlink" href="#superneuroabm.core.model.Model.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads model from pickle file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fpath</strong> – file path to pickle file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.model.Model.register_breed">
+<span class="sig-name descname"><span class="pre">register_breed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">breed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#superneuroabm.core.agent.Breed" title="superneuroabm.core.agent.Breed"><span class="pre">Breed</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#superneuroabm.core.model.Model.register_breed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.model.Model.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#superneuroabm.core.model.Model" title="superneuroabm.core.model.Model"><span class="pre">Model</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">fpath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#superneuroabm.core.model.Model.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves model. Must be overridden if additional data
+pertaining to application must be saved.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fpath</strong> – file path to save pickle file at</p></li>
+<li><p><strong>app_data</strong> – additional application data to be saved.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.model.Model.set_agent_property_value">
+<span class="sig-name descname"><span class="pre">set_agent_property_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">property_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dims</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#superneuroabm.core.model.Model.set_agent_property_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.model.Model.setup">
+<span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_cuda</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#superneuroabm.core.model.Model.setup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Must be called before first simulate call.
+Initializes model and resets ticks. Readies step functions
+and for breeds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>use_cuda</strong> – runs model in GPU mode.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="superneuroabm.core.model.Model.simulate">
+<span class="sig-name descname"><span class="pre">simulate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ticks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">update_data_ticks</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_cpu_proc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#superneuroabm.core.model.Model.simulate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="superneuroabm.core.model.generate_gpu_func">
+<span class="sig-prename descclassname"><span class="pre">superneuroabm.core.model.</span></span><span class="sig-name descname"><span class="pre">generate_gpu_func</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_properties</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">breed_idx_2_step_func_by_priority</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ticks</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superneuroabm.core.model.generate_gpu_func" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="superneuroabm.core.model.smap">
+<span class="sig-prename descclassname"><span class="pre">superneuroabm.core.model.</span></span><span class="sig-name descname"><span class="pre">smap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func_args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superneuroabm.core.model.smap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-superneuroabm.core.util">
+<span id="superneuroabm-core-util-module"></span><h2>superneuroabm.core.util module<a class="headerlink" href="#module-superneuroabm.core.util" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="superneuroabm.core.util.compress_tensor">
+<span class="sig-prename descclassname"><span class="pre">superneuroabm.core.util.</span></span><span class="sig-name descname"><span class="pre">compress_tensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Iterable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#superneuroabm.core.util.compress_tensor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="superneuroabm.core.util.convert_to_equal_side_tensor">
+<span class="sig-prename descclassname"><span class="pre">superneuroabm.core.util.</span></span><span class="sig-name descname"><span class="pre">convert_to_equal_side_tensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tensor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_dims</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">array</span></span></span><a class="headerlink" href="#superneuroabm.core.util.convert_to_equal_side_tensor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-superneuroabm.core">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-superneuroabm.core" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">superneuroabm.core package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-superneuroabm.core.agent">superneuroabm.core.agent module</a><ul>
+<li><a class="reference internal" href="#superneuroabm.core.agent.AgentFactory"><code class="docutils literal notranslate"><span class="pre">AgentFactory</span></code></a><ul>
+<li><a class="reference internal" href="#superneuroabm.core.agent.AgentFactory.breeds"><code class="docutils literal notranslate"><span class="pre">AgentFactory.breeds</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.agent.AgentFactory.create_agent"><code class="docutils literal notranslate"><span class="pre">AgentFactory.create_agent()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.agent.AgentFactory.generate_agent_data_tensors"><code class="docutils literal notranslate"><span class="pre">AgentFactory.generate_agent_data_tensors()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.agent.AgentFactory.get_agent_property_value"><code class="docutils literal notranslate"><span class="pre">AgentFactory.get_agent_property_value()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.agent.AgentFactory.get_agents_with"><code class="docutils literal notranslate"><span class="pre">AgentFactory.get_agents_with()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.agent.AgentFactory.num_agents"><code class="docutils literal notranslate"><span class="pre">AgentFactory.num_agents</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.agent.AgentFactory.register_breed"><code class="docutils literal notranslate"><span class="pre">AgentFactory.register_breed()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.agent.AgentFactory.set_agent_property_value"><code class="docutils literal notranslate"><span class="pre">AgentFactory.set_agent_property_value()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.agent.AgentFactory.update_agents_properties"><code class="docutils literal notranslate"><span class="pre">AgentFactory.update_agents_properties()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#superneuroabm.core.agent.Breed"><code class="docutils literal notranslate"><span class="pre">Breed</span></code></a><ul>
+<li><a class="reference internal" href="#superneuroabm.core.agent.Breed.name"><code class="docutils literal notranslate"><span class="pre">Breed.name</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.agent.Breed.properties"><code class="docutils literal notranslate"><span class="pre">Breed.properties</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.agent.Breed.register_property"><code class="docutils literal notranslate"><span class="pre">Breed.register_property()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.agent.Breed.register_step_func"><code class="docutils literal notranslate"><span class="pre">Breed.register_step_func()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.agent.Breed.step_funcs"><code class="docutils literal notranslate"><span class="pre">Breed.step_funcs</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-superneuroabm.core.model">superneuroabm.core.model module</a><ul>
+<li><a class="reference internal" href="#superneuroabm.core.model.Model"><code class="docutils literal notranslate"><span class="pre">Model</span></code></a><ul>
+<li><a class="reference internal" href="#superneuroabm.core.model.Model.THREADSPERBLOCK"><code class="docutils literal notranslate"><span class="pre">Model.THREADSPERBLOCK</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.model.Model.create_agent_of_breed"><code class="docutils literal notranslate"><span class="pre">Model.create_agent_of_breed()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.model.Model.get_agent_property_value"><code class="docutils literal notranslate"><span class="pre">Model.get_agent_property_value()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.model.Model.get_agents_with"><code class="docutils literal notranslate"><span class="pre">Model.get_agents_with()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.model.Model.get_synapse_weight"><code class="docutils literal notranslate"><span class="pre">Model.get_synapse_weight()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.model.Model.load"><code class="docutils literal notranslate"><span class="pre">Model.load()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.model.Model.register_breed"><code class="docutils literal notranslate"><span class="pre">Model.register_breed()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.model.Model.save"><code class="docutils literal notranslate"><span class="pre">Model.save()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.model.Model.set_agent_property_value"><code class="docutils literal notranslate"><span class="pre">Model.set_agent_property_value()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.model.Model.setup"><code class="docutils literal notranslate"><span class="pre">Model.setup()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.model.Model.simulate"><code class="docutils literal notranslate"><span class="pre">Model.simulate()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#superneuroabm.core.model.generate_gpu_func"><code class="docutils literal notranslate"><span class="pre">generate_gpu_func()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.model.smap"><code class="docutils literal notranslate"><span class="pre">smap()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-superneuroabm.core.util">superneuroabm.core.util module</a><ul>
+<li><a class="reference internal" href="#superneuroabm.core.util.compress_tensor"><code class="docutils literal notranslate"><span class="pre">compress_tensor()</span></code></a></li>
+<li><a class="reference internal" href="#superneuroabm.core.util.convert_to_equal_side_tensor"><code class="docutils literal notranslate"><span class="pre">convert_to_equal_side_tensor()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-superneuroabm.core">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="superneuroabm.html"
+                          title="previous chapter">superneuroabm package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/superneuroabm.core.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="superneuroabm.html" title="superneuroabm package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">superneuroabm  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="superneuroabm.html" >superneuroabm package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">superneuroabm.core package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Oak Ridge National Laboratories.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
+    </div>
+  </body>
+</html>
